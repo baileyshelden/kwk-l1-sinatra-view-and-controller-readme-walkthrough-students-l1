@@ -1,20 +1,3 @@
-require_relative 'config/environment'
-require_relative 'model.rb'
-    
-# results("denver", "$$", "none")
-
-# def output(r)
-#   items = {
-#     :rest1 => r[0],
-#     :rest2 => r[1].
-#     :rest3 => r[2],
-#     :rest4 => r[3],
-#     # :rest5 = r[4],
-#     # if(r.length > 5)
-#     #   :rest6 = r[5]
-#     # end
-#   }
-# end 
 def results(city, price, dietary_restrictions) 
 boulder = {
  
@@ -177,15 +160,19 @@ elsif city == "denver"
       end 
     end 
   end 
-end   
-class App < Sinatra::Base
+end 
+    
+# puts results("denver", "$$", "none")
 
-get '/' do
-  erb :foodecisive
-end
-post '/' do
-  @result = results(params["city"].to_s, params["price"].to_s, params["dietary_restrictions"].to_s).to_a
-  erb :temporary
-end
-
-end
+# def output(r)
+#   items = {
+#     :rest1 => r[0],
+#     :rest2 => r[1].
+#     :rest3 => r[2],
+#     :rest4 => r[3],
+#     # :rest5 = r[4],
+#     # if(r.length > 5)
+#     #   :rest6 = r[5]
+#     # end
+#   }
+# end 
